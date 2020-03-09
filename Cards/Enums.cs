@@ -1,6 +1,6 @@
 ﻿namespace Cards
 {
-    enum Cards
+    enum Face
     {
         Ace,
         Two,
