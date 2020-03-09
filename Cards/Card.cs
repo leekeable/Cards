@@ -4,12 +4,12 @@
 
     class Card : IComparable<Card>
     {
-        public Cards CardType { get; private set; }
+        public Face Face { get; private set; }
         public Suit Suit { get; private set; }
 
-        public Card(Cards type, Suit suit)
+        public Card(Face face, Suit suit)
         {
-            CardType = type;
+            CardType = face;
             Suit = suit;
         }
 
@@ -18,7 +18,7 @@
             if (other == null) return 1;
             if (Suit != other.Suit)
                 return Suit.CompareTo(other.Suit);
-            return CardType.CompareTo(other.CardType);
+            return CardType.CompareTo(other.Face);
         }
 
         public override string ToString()
